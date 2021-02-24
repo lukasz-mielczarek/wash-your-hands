@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Avoid people </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+<h1>Survive it!</h1>
+<div class="options">
+<form action="{{ url_for('init_board', num_of_fields = 1, num_of_players = 2)}}" class="type-init" method="get">
+    <label for = "num_of_fields"> <strong>Number of fields:</strong></label>
+    <select name="num_of_fields" required id="num_of_fields">
+        <option value="24">24</option>
+        <option value="24">32</option>
+        <option value="24">40</option>
+        <option value="24">48</option>
+        <option value="24">56</option>
+        <option value="24">24</option>
+    </select>
+    </br>
+    <label for="num_of_players"><strong>Number of players:</strong></label>
+    <select name="num_of_players" required id="num_of_players">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    </br>
+    <input id="submit" type="submit" value="Be safe.">
+</form>
+</div>
+</body>
+</html>

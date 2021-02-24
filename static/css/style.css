@@ -1,0 +1,69 @@
+body {
+    background-image: url("../img/virus_bckg.jpeg");
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    background-size: cover;
+    background-position: center;
+}
+
+.game-field {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+p {
+    color: #9C1A1C;
+}
+.game-field .row {
+    position: center;
+    height: 60px;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px 10px;
+
+    /*background: url('/static/img/normalplace.png');*/
+}
+
+.game-field .row .field {
+    height: 90px;
+    width: 110px;
+
+    background: url('/static/img/025276_620.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 2px solid #267a3c;
+    filter: grayscale(50%);
+
+
+}
+.game-field .row .challenge {
+    height: 90px;
+    width: 110px;
+    background: url('/static/img/025276_620.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    /*border: 2px solid #2F6FAD;*/
+    filter: grayscale(0%);
+
+}
+
+.spacing {
+    /*display: inline-block;*/
+    text-align: center;
+}
+
+
+#roll-dice {
+    background: url('/static/img/dice1.png');
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survive it!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+<div class="spacing">
+<div id="game-field" class="game-field" style="width: {{ 160*cols }} px; height: {{ 180*rows }}px"
+     data-fieldnum ="{{ num_of_fields }}" data-playersnum ="{{ num_of_players }}" data-plone = "0" data-pltwo="0">
+    {% for row_index in range(rows) %}
+        <div class="row">
+            {% for col_index in range(cols) %}
+                <div
+                        class="field {{ 'challenge' if ((row_index * cols + col_index) in challenge_fields) else '' }}"
+                        data-row="{{ row_index }}"
+                        data-col="{{ col_index }}"
+                        data-field="{{row_index * 8 + col_index if col_index else row_index*8 }}">
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+
+</br>
+</br>
+<div class="dice" id="roll-dice">
+</div>
+    </div>
+<script src="{{ url_for('static', filename='js/game.js') }}" defer></script>
+</body>
+</html>
